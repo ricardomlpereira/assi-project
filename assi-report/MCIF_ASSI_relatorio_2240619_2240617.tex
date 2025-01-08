@@ -1,0 +1,368 @@
+\documentclass[journal]{IEEEtran}
+
+% *** CITATION PACKAGES ***
+\usepackage{cite}
+% \cite{} output to follow that of the IEEE. Loading the cite package will
+% result in citation numbers being automatically sorted and properly
+% "compressed/ranged". e.g., [1], [9], [2], [7], [5], [6] without using
+% cite.sty will become [1], [2], [5]--[7], [9] using cite.sty. cite.sty's
+% \cite will automatically add leading space, if needed. Use cite.sty's
+% noadjust option (cite.sty V3.8 and later) if you want to turn this off
+% such as if a citation ever needs to be enclosed in parenthesis.
+% cite.sty is already installed on most LaTeX systems. Be sure and use
+% version 5.0 (2009-03-20) and later if using hyperref.sty.
+
+% *** SUBFIGURE PACKAGES ***
+%\ifCLASSOPTIONcompsoc
+%  \usepackage[caption=false,font=normalsize,labelfont=sf,textfont=sf]{subfig}
+%\else
+%  \usepackage[caption=false,font=footnotesize]{subfig}
+%\fi
+% subfig.sty, written by Steven Douglas Cochran, is the modern replacement
+% for subfigure.sty, the latter of which is no longer maintained and is
+% incompatible with some LaTeX packages including fixltx2e. However,
+% subfig.sty requires and automatically loads Axel Sommerfeldt's caption.sty
+% which will override IEEEtran.cls' handling of captions and this will result
+% in non-IEEE style figure/table captions. To prevent this problem, be sure
+% and invoke subfig.sty's "caption=false" package option (available since
+% subfig.sty version 1.3, 2005/06/28) as this is will preserve IEEEtran.cls
+% handling of captions.
+% Note that the Computer Society format requires a larger sans serif font
+% than the serif footnote size font used in traditional IEEE formatting
+% and thus the need to invoke different subfig.sty package options depending
+% on whether compsoc mode has been enabled.
+%
+% The latest version and documentation of subfig.sty can be obtained at:
+% http://www.ctan.org/pkg/subfig
+
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{Bare Demo of IEEEtran.cls\\ for IEEE Journals}
+
+% \author -> secção de autores; \thanks -> nota de rodapé
+\author{Ricardo~Pereira,
+  André~Filho% <-this % stops a space
+  \thanks{R. Pereira e A. Filho estão com o Instituto Politécnico de Leiria.}}% <-this % stops a space
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+% FIXME: verificar se metemos 1 resumo e 1 abstract (e 1 titulo em tuga e outro em ingles) ou só
+% 1 elemento de cada cena em português
+\begin{abstract}
+  The abstract goes here.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+\begin{IEEEkeywords}
+  IEEE, IEEEtran, journal, \LaTeX, paper, template.
+\end{IEEEkeywords}
+
+
+\section{Introduction}
+% The very first letter is a 2 line initial drop letter followed
+% by the rest of the first word in caps.
+% 
+% form to use if the first word consists of a single letter:
+% \IEEEPARstart{A}{demo} file is ....
+% 
+% form to use if you need the single drop letter followed by
+% normal text (unknown if ever used by the IEEE):
+% \IEEEPARstart{A}{}demo file is ....
+% 
+% Some journals put the first two words in caps:
+% \IEEEPARstart{T}{his demo} file is ....
+% 
+% Here we have the typical use of a "T" for an initial drop letter
+% and "HIS" in caps to complete the first word.
+%\IEEEPARstart{T}{his} demo file is intended to serve as a ``starter file''
+%for IEEE journal papers produced under \LaTeX\ using
+%IEEEtran.cls version 1.8b and later.
+% You must have at least 2 lines in the paragraph with the drop letter
+% (should never be an issue)
+%I wish you the best of success.
+Tópicos a abordar:
+\begin{itemize}
+  \item 0.75 páginas
+  \item Contexto do problema (definir DDoS; explicar que são um problema em crescente importância no mundo da cibersegurança; mencionar o seu potencial
+        impacto e que consequentemente se releva importante haver protecoes contra eles)
+  \item objetivo do projeto/paper/metodologia
+  \item estrutura do paper
+\end{itemize}
+
+\section{Panorama global}
+Tópicos a abordar:
+\begin{itemize}
+  \item 1 página
+  \item Falar de uma maneira mais especifica sobre como se caracteriza cada ataque DDoS (coisas que os fazem unicos; tipos)
+  \item Falar de motivacoes para fazer ataques DDoS (caracterizando-as: ganhos financeiros, ativismo; agenta politica; vandalismo: ect)
+  \item Mencionar em maior detalhe os seus impactos (consequencias diretas e indiretas, como perdas financeiras, danos reputacionais, disrupcoes de infraestrutura critica)
+\end{itemize}
+
+
+\section{Mecânismos empregues}
+Tópicos a abordar:
+\begin{itemize}
+  \item 1 página
+  \item como detetar um ataque (possivelmente aqui)
+  \item Técnicas de amplfiuicação de tráfico (DNS, NTP, SNMP, SSDP, ect)
+  \item Técnicas de exaustão de recursos (SYN flood, ACK flood, ect)
+  \item Introduzir o conceito de botnets (o que sao; como sao criadas; como sao utilzadas; dar exemplos de botnets reais)
+  \item Mencionar ferramentas e plataformas utilizadas para lançar ataques DDoS
+\end{itemize}
+
+\section{Demonstração Prática}
+Tópicos a abordar:
+\begin{itemize}
+  \item 0.75 paginas
+  \item Setup
+  \item Execução
+  \item Resultados (e potenciais observações)
+  \item Considerações éticas e legais (caso seja necessário palha)
+\end{itemize}
+
+\section{Estratégias e desafios na mitigação}
+Tópicos a abordar:
+\begin{itemize}
+  \item 2 páginas
+  \item Difiuldades de deteção
+  \item Escalabilidade das defesas
+  \item Sofisticação dos ataques
+  \item Assimetria entre recursos de ataque e defesa (...)
+  \item como detetar um ataque DDoS
+  \item Estrategias de ultima geração com grandes impactos
+  \item AI-Driven trafic analysis; cloud-based mitigation; zero-trust network security; ect
+  \item Estrategias mais tradicionais
+\end{itemize}
+
+\section{Perspetiva futura}
+Tópicos a abordar:
+\begin{itemize}
+  \item 1 página
+  \item Evolução dos vetores de ataque
+  \item Riscos associados à interconetividade de dispositivos (e de que maneira o aumento desta pode provocar mais problemas no ambito relevante)
+  \item enfatizar o papel das redes 5g da escala enorme de interconetividade dos dispositivos
+  \item O papel da IA e do ML na constituição de ataques DDoS e na proteção destes
+  \item Politicas e regulamentações (caso seja necessaria palha)
+\end{itemize}
+
+% An example of a floating figure using the graphicx package.
+% Note that \label must occur AFTER (or within) \caption.
+% For figures, \caption should occur after the \includegraphics.
+% Note that IEEEtran v1.7 and later has special internal code that
+% is designed to preserve the operation of \label within \caption
+% even when the captionsoff option is in effect. However, because
+% of issues like this, it may be the safest practice to put all your
+% \label just after \caption rather than within \caption{}.
+%
+% Reminder: the "draftcls" or "draftclsnofoot", not "draft", class
+% option should be used if it is desired that the figures are to be
+% displayed while in draft mode.
+%
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=2.5in]{myfigure}
+% where an .eps filename suffix will be assumed under latex, 
+% and a .pdf suffix will be assumed for pdflatex; or what has been declared
+% via \DeclareGraphicsExtensions.
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure}
+
+% Note that the IEEE typically puts floats only at the top, even when this
+% results in a large percentage of a column being occupied by floats.
+
+
+% An example of a double column floating figure using two subfigures.
+% (The subfig.sty package must be loaded for this to work.)
+% The subfigure \label commands are set within each subfloat command,
+% and the \label for the overall figure must come after \caption.
+% \hfil is used as a separator to get equal spacing.
+% Watch out that the combined width of all the subfigures on a 
+% line do not exceed the text width or a line break will occur.
+%
+%\begin{figure*}[!t]
+%\centering
+%\subfloat[Case I]{\includegraphics[width=2.5in]{box}%
+%\label{fig_first_case}}
+%\hfil
+%\subfloat[Case II]{\includegraphics[width=2.5in]{box}%
+%\label{fig_second_case}}
+%\caption{Simulation results for the network.}
+%\label{fig_sim}
+%\end{figure*}
+%
+% Note that often IEEE papers with subfigures do not employ subfigure
+% captions (using the optional argument to \subfloat[]), but instead will
+% reference/describe all of them (a), (b), etc., within the main caption.
+% Be aware that for subfig.sty to generate the (a), (b), etc., subfigure
+% labels, the optional argument to \subfloat must be present. If a
+% subcaption is not desired, just leave its contents blank,
+% e.g., \subfloat[].
+
+
+% An example of a floating table. Note that, for IEEE style tables, the
+% \caption command should come BEFORE the table and, given that table
+% captions serve much like titles, are usually capitalized except for words
+% such as a, an, and, as, at, but, by, for, in, nor, of, on, or, the, to
+% and up, which are usually not capitalized unless they are the first or
+% last word of the caption. Table text will default to \footnotesize as
+% the IEEE normally uses this smaller font for tables.
+% The \label must come after \caption as always.
+%
+%\begin{table}[!t]
+%% increase table row spacing, adjust to taste
+%\renewcommand{\arraystretch}{1.3}
+% if using array.sty, it might be a good idea to tweak the value of
+% \extrarowheight as needed to properly center the text within the cells
+%\caption{An Example of a Table}
+%\label{table_example}
+%\centering
+%% Some packages, such as MDW tools, offer better commands for making tables
+%% than the plain LaTeX2e tabular which is used here.
+%\begin{tabular}{|c||c|}
+%\hline
+%One & Two\\
+%\hline
+%Three & Four\\
+%\hline
+%\end{tabular}
+%\end{table}
+
+
+% Note that the IEEE does not put floats in the very first column
+% - or typically anywhere on the first page for that matter. Also,
+% in-text middle ("here") positioning is typically not used, but it
+% is allowed and encouraged for Computer Society conferences (but
+% not Computer Society journals). Most IEEE journals/conferences use
+% top floats exclusively. 
+% Note that, LaTeX2e, unlike IEEE journals/conferences, places
+% footnotes above bottom floats. This can be corrected via the
+% \fnbelowfloat command of the stfloats package.
+
+
+
+
+\section{Conclusão}
+\begin{itemize}
+  \item 0.5-1 páginas
+\end{itemize}
+The conclusion goes here.
+
+% if have a single appendix:
+%\appendix[Proof of the Zonklar Equations]
+% or
+%\appendix  % for no appendix heading
+% do not use \section anymore after \appendix, only \section*
+% is possibly needed
+
+% use appendices with more than one appendix
+% then use \section to start each appendix
+% you must declare a \section before using any
+% \subsection or using \label (\appendices by itself
+% starts a section numbered zero.)
+%
+
+
+%\appendices
+%\section{Proof of the First Zonklar Equation}
+%Appendix one text goes here.
+
+% you can choose not to have a title for an appendix
+% if you want by leaving the argument blank
+%\section{}
+%Appendix two text goes here.
+
+
+% use section* for acknowledgment
+\section*{Acknowledgment}
+
+
+The authors would like to thank...
+
+
+% Can use something like this to put references on a page
+% by themselves when using endfloat and the captionsoff option.
+\ifCLASSOPTIONcaptionsoff
+  \newpage
+\fi
+
+
+
+% trigger a \newpage just before the given reference
+% number - used to balance the columns on the last page
+% adjust value as needed - may need to be readjusted if
+% the document is modified later
+%\IEEEtriggeratref{8}
+% The "triggered" command can be changed if desired:
+%\IEEEtriggercmd{\enlargethispage{-5in}}
+
+% references section
+
+% can use a bibliography generated by BibTeX as a .bbl file
+% BibTeX documentation can be easily obtained at:
+% http://mirror.ctan.org/biblio/bibtex/contrib/doc/
+% The IEEEtran BibTeX style support page is at:
+% http://www.michaelshell.org/tex/ieeetran/bibtex/
+%\bibliographystyle{IEEEtran}
+% argument is your BibTeX string definitions and bibliography database(s)
+%\bibliography{IEEEabrv,../bib/paper}
+%
+% <OR> manually copy in the resultant .bbl file
+% set second argument of \begin to the number of references
+% (used to reserve space for the reference number labels box)
+\begin{thebibliography}{1}
+  
+  \bibitem{IEEEhowto:kopka}
+  H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
+  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
+  
+\end{thebibliography}
+
+% biography section
+% 
+% If you have an EPS/PDF photo (graphicx package needed) extra braces are
+% needed around the contents of the optional argument to biography to prevent
+% the LaTeX parser from getting confused when it sees the complicated
+% \includegraphics command within an optional argument. (You could create
+% your own custom macro containing the \includegraphics command to make things
+% simpler here.)
+%\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
+% or if you just want to reserve a space for a photo:
+
+% FIXME: o prof pede expressamente que isto seja feito (com foto).
+\begin{IEEEbiography}{Ricardo Pereira}
+  Biography text here.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}{André Filho}
+  Biography text here.
+\end{IEEEbiography}
+
+% You can push biographies down or up by placing
+% a \vfill before or after them. The appropriate
+% use of \vfill depends on what kind of text is
+% on the last page and whether or not the columns
+% are being equalized.
+
+%\vfill
+
+% Can be used to pull up biographies so that the bottom of the last one
+% is flush with the other column.
+%\enlargethispage{-5in}
+
+
+
+% that's all folks
+\end{document}
+
+
