@@ -38,6 +38,12 @@
 % FIXME: apagar no fim
 \usepackage{lipsum, soul, color}
 
+% Secções (subsections) sem : e com o texto a começar em baixo
+\makeatletter % added <<<<<<<<<<<<<<<<<<<
+\def\subsubsection{\@startsection{subsubsection}{3}{\parindent}{1ex plus 0.1ex minus 0.1ex}%
+    {0.7ex plus .5ex minus 0ex}{\normalfont\normalsize\itshape}}%
+\makeatother
+
 \begin{document}
 %
 % paper title
