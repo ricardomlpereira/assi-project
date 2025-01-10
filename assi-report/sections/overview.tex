@@ -40,7 +40,7 @@ No caso concreto dos ataques que procuram explorar aplicações indevidamente ut
 
 Importa, ainda, notar que no ano de 2020 o serviço \textit{Amazon Web Services} foi alvo de um \textit{Volumetric DDoS Attack} de 2.3 \textit{Terabits} por segundo de largura de banda, representado este um dos mais recentes e impactantes ataques da sua categoria. Neste seguimento, o ataque em questão foi concretizado via exploração do protocolo \textit{Connection-less Lightweight Directory Access Protocol}, de modo a inundar serviço em questão com um volume significativo de tráfego irrelevante. Mais se acrescenta que foram necessários diversos dias para que a equipa encarregue de solucionar este constragimento fosse capaz de mitigar por completo o ataque \cite{connectwise_types_of_ddos_attacks,aws_ddos_2020}.
 
-\subsubsection{\textit{Protocol Attacks}}
+\subsubsection{\textit{Protocol DDoS Attacks}}
 Os \textit{Protocol Attacks} procuram explorar protocolos, de modo a sobrecarregar um recurso público específico, nomeadamente servidores mas, também, \textit{firewalls} ou \textit{load balancers} constrastando, assim, como os \textit{Volumetric DDoS Attacks}, dado que não é utilizada uma quantidade substancial de uma matéria, principalmente \textit{requests}, para concretizar o ataque de negação de servíço distribuída, mas sim apenas uma falha. Mais se acrescenta que a magnitude dos \textit{Protocol Attacks} é medida mediante cálculo dos pacotes por segundo que este envia \cite{esecurityplanet_types_of_ddos_attacks}.
 
 
@@ -70,8 +70,9 @@ Além dos ataques que procuram explorar diretamente o protocolo TCP, importa not
     \item \textit{High Orbit Ion Cannon}
 \end{itemize}
 
-\subsubsection{\textit{Application Attacks}}
-No âmbito dos DDoS \textit{Application Attacks} importa realçar que estes procuram explorar vulnerabilidades presentes em aplicações, de modo a causar falhas na própria aplicação. Deste modo, cabe notar que, ao contrário de outras categorias de ataques DDoS, mais específicamente aqueles que visam comprometer a disponibilidade de um dispositivo ou infraestrutura, os ataques de aplicações concentram-se na camada de \textit{software}. Contudo, estes ataques podem, também, resultar em processadores sobrecarregados, assim como memórias exaustas, afetando, inclusivamente, o servidor e outras aplicações. Assim, releva realçar que a magnitude de um \textit{Application Attack} é medida em pedidos por segundo. Mais se acrescenta que os principais ataques DDoS de aplicações incluem \textit{Hypertext Transfer Protocol} (HTTP) \textit{Flood Attacks} e ReDoS \cite{esecurityplanet_types_of_ddos_attacks,connectwise_types_of_ddos_attacks}.
+\subsubsection{\textit{Application DDoS Attacks}}
+No âmbito dos DDoS \textit{Application Attacks} importa realçar que estes procuram explorar vulnerabilidades em aplicações, de modo a causar falhas na própria aplicação. Deste modo, cabe notar que, ao contrário de outras categorias de ataques DDoS, mais específicamente aqueles que visam comprometer a disponibilidade de um dispositivo ou infraestrutura, os ataques de aplicações concentram-se em comprometer a camada 7 do modelo \textit{Open Systems Interconnection} (OSI). Contudo, estes ataques podem, também, resultar em processadores sobrecarregados, assim como memórias exaustas, afetando, inclusivamente, o servidor e outras aplicações. Assim, releva realçar que a magnitude de um \textit{Application Attack} é medida em pedidos por segundo. Mais se acrescenta que os principais ataques DDoS de aplicações incluem \textit{Hypertext Transfer Protocol} (HTTP) \textit{Flood Attacks} e ReDoS \cite{esecurityplanet_types_of_ddos_attacks,connectwise_types_of_ddos_attacks}.
+
 
 Nesta senda, cabe notar que os ataques de HTTP \textit{Flood} procuram explorar os comandos HTTP, de modo a sobrecarregar \textit{websites}, os servidores que hospedam estes, assim como a largura de banda emprega para os alcançar, mediante utilização de uma BOTNET. Assim, os \textit{bots} utilizados nestes ataques permitem o envio de múltiplos pedidos sequencialmente, de modo a que cada \textit{bot} constituinte da rede permita aumentar exponencialmente o tráfego enviado para o \textit{website} alvo. Deste modo, importa realçar os diversos tipos de ataques de HTTP \textit{Flood} existentes, a saber \cite{esecurityplanet_types_of_ddos_attacks}:
 \begin{itemize}
@@ -87,25 +88,33 @@ Nesta senda, cabe notar que os ataques de HTTP \textit{Flood} procuram explorar 
 No caso concreto do ataque ReDoS, cabe notar que este emprega \textit{regular expressions}, de modo a concretizar um ataque de DDoS. Assim, o atacante constitui pedidos que visam obter quantidades extraordináriamente elevadas e complexas de padrões de pesquisa, possibilitando a exaustão de recursos ou, potencialmente, o acontecimento de \textit{crashes} no sistema alvo \cite{esecurityplanet_types_of_ddos_attacks}.
 
 
-\subsection{\textit{Mecanismos de Deteção}}
-
-\hl{TODO - Especificar que isto sao detacao atraves de sinais}
-
-No âmbito da deteção de ataques DDoS, importa realçar que este processo envolve, essencialmente, o reconhecimento de sinais que indicam que o sistema encontra-se como alvo de ataque. Assim, revela-se imperativo notar estes mesmos sinais, a saber \cite{cybergc_defending_agaisnt_ddos}:
-\begin{itemize}
-    \item Aumento súbito e inesperado de tráfego de rede de uma localização específica ou de um endereço IP particular
-    \item Desempenho fraco e irregular da rede, nomeadamente no âmbito dos tempos de carregamento dos \textit{websites} e da disponibilidade global dos serviços. Mais se acrescenta que um abrandamento considerável de um sistema é um sinal evidente de que este se encontra sob um ataque DDoS.
-    \item Mensagens de erro de servidores, \textit{timeouts} e incapacidades em aceder a serviços e aplicações inexplicáveis. Assim, aquando destas circunstâncias, um atacante conseguiu comprometer a disponibilidade do sistema. Mais se acrescenta que, no caso concreto de um ataque DDoS de grau superior de seriedade, estas complicações não serão resolvidas mediante, exclusivamente, redução do tráfego de rede que chega a esta.
-    \item Queixas, por parte dos funcionários, sobre uma conetividade de rede fraca. Mais se acrescenta que, este sinal, revela principal utilidade em circunstâncias onde a rede utilizada pelos funcionários é a mesma que a rede empregue pelos serviços, servidores e aplicações da organização.
-    \item Desempenho transversalmente reduzido de dispositivos pertencente à mesma rede. Neste caso concreto, é possível perspetivar que o atacante comprometeu com sucesso a largura de banda da rede, minimizando a disponibilidade desta para os dispositivos que de si dependem.
-    \item Notificações do \textit{Internet Service Provider},\textit{Cloud Service Provider}, assim como outros fornecedores de serviços empregues.
-\end{itemize}
-
-\hl{TODO - Abordar ferramentas em especifico}
-
-\subsection{\textit{Ferramentas e plataformas utilizadas}}
-TODO
+\subsection{\textit{Ferramentas utilizadas}}
+Existem inúmeras ferramentas que possibilitam a concretização de um ataque DDoS, nomeadamente os \textit{stressors}. Neste seguimento, cabe notar que, esta categoria, é constituida por um conjunto extenso de outras ferramentas construídas, de modo a possibilitar a realização de um \textit{stress test} a uma rede. Assim, dadas esta capacidade intrínseca de sobrecarregar uma rede, estas ferramentas podem, também, ser empregues em ataques de DDoS. Mais se acrescenta que, estas ferramentas, possuem níveis de especialidade distintos, já que, algumas, são capazes de executar ataques mediante múltiplos vetores distintos, enquanto que outras especializam-se em concretizar ofensivas numa determinada camada do modelo OSI \cite{cloudflare_ddos_tools, radware_attack_tools}.
 
 
-\subsection{\textit{Motivações e Impactos}}
-TODO
+Nesta senda, cumpre clarificar algumas categorias de ferramentas empregues em ataques de DDoS, a saber: \textit{Long and slow attack tools}; \textit{Application Layer attack tools}; \textit{Protocol Layer attack tools} \cite{cloudflare_ddos_tools}.
+
+No caso concreto das primeiras ferramentas, tal como o nome indíca, estas proporcionam a possibilidade de realizar ataques DDoS \textit{Long and Slow}, já que a metodologia consite em enviar para o seu alvo uma quantidade baixa de volume de dados a uma velocidade muito lenta. Deste modo, estas ferramentas permite efetuar a manutenção de conexões, em múltiplas portas, com um sistema alvo durante longos períodos de tempo, promovendo um consumo considerável de recursos deste mesmo. Mais se acrescenta que, estas ferramentas, podem, inclusivamente, ser eficientes na concretização de um ataque DDoS, sem a necessidade de utilizar uma BOTNET, sendo frequentemente empregues por atacantes que só possuem acesso a um único dispositivo \cite{cloudflare_ddos_tools, radware_attack_tools}.
+
+
+Por sua vez, as segundas, executar ataques DDoS de aplicações, mais especificamente ofensivas deste tipo que procuram comprometer a camada 7 do modelo OSI. Assim, um atacante, mediante utilização destas ferramentas e, consequentemente, de uma das técnicas explanada no ponto II.B.3, pode lançar uma quantidade desproporcionada de pedidos a um sistema alvo. Mais se acrescenta que, este tráfego adicional, revela dificuldade de deteção, ou seja, é complicado para as defesas do alvo distinguirem este de pedidos normais, efetuados por utilizados legítimos \cite{cloudflare_ddos_tools}.
+
+
+As terceiras ferramentas supramencionadas, procuram explorar vulnerabilidades presentes em protocolos, de modo a comprometer a disponibilidade de um sistema alvo. Deste modo, importa realçar que, estas ferramentes, são, habitualmente, empregues por BOTNETs, já que a magnitude do ataque promovido por estas aumenta, considerávelmente, com o acréscimo de quantidade de dispositivos que pertencem a este. Mais se acrescenta que, quando empregues em um único dispositivo, estes utensílios podem ser totalmente ineficiêntes \cite{cloudflare_ddos_tools}.
+
+
+\hl{TODO: Maybe falar das mais comuns (esta no link da citação)}
+
+\subsection{\textit{Impactos e Motivações}}
+Cada ataque DDoS possuí características que o distinguem dos demais, inclusivamente no que aos impactos e motivações diz respeito.
+
+
+No âmbito dos impactos, cabe notar o prejuízo financeiro associado a um ataque DDoS bem-sucedido a uma organização, já que estes podem causar um decréscimo de produtividade dos funcionários desta mesma, indisponibilidade dos seus serviços, inclusivamente, podendo agravar esta consequencia mediante a potencial perda de clientes e perda global de rendimentos, via incapacidade de realizar os seus processos de negócio. Além disso vão, também, existir custos associados à recuperação dos sistemas afetados, assim como à implementação de medidas que possibilitem precaver e mitigar futuros ataques. Mais se acrescenta que, estes ataques, podem, também, causar complicações legais, mais especificamente disputas entre a organização que sofreu o ataque e os seus clientes, potencialmente agravando, assim, os prejuízo financeiro associado ao ataque \cite{connectwise_types_of_ddos_attacks,cybergc_defending_agaisnt_ddos,stormwall_impacts_ddos}.
+
+Nesta senda, importa, também, realçar que os ataques DDoS podem ser particularmente danificantes para a reputação de uma organização, nomeadamente para empresas que proporcionam serviços onde a disponibilidade revela-se imperativa. Assim, no caso concreto destas empresas, um ataque à disponibilidade dos seus serviços, devido ao \textit{downtime} que causa, pode danificar gravemente a reputação desta mesma, assim como a sua relação com clientes e parceiros. Mais se acrescenta que, um ataque DDoS pode, inclusivamente revelar vulnerabilidades e fraquezas adicionais nos sistemas de uma organização, assim como na sua rede interna que facultam a possibilidade de, posteriormente, serem executados outros tipos de ataques que exploram estes mesmos \cite{connectwise_types_of_ddos_attacks,cybergc_defending_agaisnt_ddos,stormwall_impacts_ddos}.
+
+
+Por sua vez, no âmbito das motivações, cabe notar que os atacantes justificam as suas ações com base em ganhos financeiros, via utilização de diversas técnicas, nomeadamente extorsão e \textit{blackmailing}, onde são efetuadas promessas de interromper os ataques, mediante o pagamento de um valor de resgate. Além disso, os ataques podem ser perpetrados por um indivíduo que possua a necessidade de vingança para com uma organização específica ou um outro indivíduo, assim como por alguem que procura comprovar as suas capacidades ou que apenas possuí o intuito de obter satisfação pessoal \cite{cybergc_defending_agaisnt_ddos,perimeter81_ddos_motivations}.
+
+
+Neste seguimento, importa, também, realçar que os ataques DDoS podem ser motivados por ações de \textit{hackvism}, onde um atacante procura utilizar estes ataques para chamar atenção e protestar um político, política ou ideologia, assim como governos e outras instituições relevantes, nomeadamente administrativas ou políticas. Mais se acrescenta que a \textit{cyberwarfare} demonstra ser um assunto progressivamente mais perentório, no horizonte de ataques DDoS, já que estes são crescentemente utilizados por países, de modo a possibilitar o comprometido de diversos aspetos de outros países, permitindo, assim, obter ganhos políticos e militares \cite{cybergc_defending_agaisnt_ddos,perimeter81_ddos_motivations}.
