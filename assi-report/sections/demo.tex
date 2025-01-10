@@ -1,18 +1,18 @@
 \section{Demonstração Prática}
-De modo a exemplificar os conceitos enunciados no capítulo II, foi realizada uma demonstração prática que almejou, fundamentalmente, constituir uma BOTNET de pequena dimensão, num ambiente controla. Assim, foram desenvolvidas diversas ferramentas, com o apoio de bibliotecas \textit{open source},que possibilitaram o estabelecimento de um fluxo automático de informação entre um operador humano e um alvo digital.
+De modo a exemplificar os conceitos enunciados no capítulo II, foi realizada uma demonstração prática que almejou, fundamentalmente, constituir uma BOTNET de pequena dimensão, num ambiente controla. Assim, foram desenvolvidas diversas ferramentas, com o apoio de bibliotecas \textit{open source}, que possibilitaram o estabelecimento de um fluxo automático de informação entre um operador humano e um alvo digital.
 
-Neste seguimento, o ambiente em questão, foi implementado localmente, mediante utilização de uma rede local, assim como 3 computadores. Mais se acrescenta que, 2 dos computadores desempenharam o papel de \textit{bot}, enquanto que o restante dispositivo desempenhou o papel de servidor C2 e sistema alvo.
+Neste seguimento, o ambiente em questão, foi implementado localmente, mediante utilização de uma rede local, assim como 3 computadores. Mais se acrescenta que 2 dos computadores desempenharam o papel de \textit{bot}, enquanto que o restante dispositivo desempenhou o papel de servidor C2 e sistema alvo.
 
 \subsection{Processo de \textit{Setup}}
-Para a implementação do ambiente, foi utilizada a linguagem de programação Python, mais especificamente a versão 3.12 desta mesma, já que as versões posteriores apresentam diversos problemas de compabilidade com as bibliotecas empregues.
+Para a implementação do ambiente, foi utilizada a linguagem de programação Python, mais especificamente a versão 3.12 desta mesma, já que as versões posteriores apresentam diversos problemas de compatibilidade com as bibliotecas empregues.
 
 
 Deste modo, cumpre esclarecer as ferramentas utilizadas pelos intervenientes da demonstração prática, a saber:
 \begin{itemize}
-    \item \textit{Bots}: funcionalidades de DoS disponibilizadas pelo projeto Bane \cite{github_bane}. Nesta senda, cabe notar que foram utilizados o módulo relacionado com um ataque DDoS. De modo a instalar este, foi necessário utilizar a supramencionada versão do Python, assim como efetuar a importação deste. Mais se acrescenta que os \textit{bots} possuem um servidor cliente próprio, cujo possiblita a comunicação com o controlador C2 e, consequentemente, a obtenção de comandos e o envio de relatórios para este, procurando clarificar o estado das operações.
+    \item \textit{Bots}: funcionalidades de DoS disponibilizadas pelo projeto Bane \cite{github_bane}. Nesta senda, cabe notar que foram utilizados o módulo relacionado com um ataque DDoS. De modo a instalar este, foi necessário utilizar a supramencionada versão do Python, assim como efetuar a importação deste. Mais se acrescenta que os \textit{bots} possuem um servidor cliente próprio, cujo possibilita a comunicação com o controlador C2 e, consequentemente, a obtenção de comandos e o envio de relatórios para este, procurando clarificar o estado das operações.
     \item Servidor C2: qualquer servidor capaz de receber pedidos HTTP será suficiente. Assim, foi empregue a ferramenta Flask, que se revelou curial às necessidades da demonstração.
-    \item Servidor Alvo: foi constituido um servidor simples que somente regista os pedidos que recebe. Mais se acrescenta que foi utilizado o módulo Beszel \cite{github_beszel}, de modo a monitorizar o tráfego recebido, já que este possuí requisitos mínimos de implementação.
-    \item Operator: procura comunicar com o servidor C2, via pedidos HTTP. De modo a possibilitar isto mesmo, foi disponibilizada, em formato de texto, a totalidade de comandos \textit{Invoke-WebRequest} possíveis no ficheiro "c2\_server\_commands".
+    \item Servidor Alvo: foi constituído um servidor simples que somente regista os pedidos que recebe. Mais se acrescenta que foi utilizado o módulo Beszel \cite{github_beszel}, de modo a monitorizar o tráfego recebido, já que este possuí requisitos mínimos de implementação.
+    \item Operador: procura comunicar com o servidor C2, via pedidos HTTP. De modo a possibilitar isto mesmo, foi disponibilizada, em formato de texto, a totalidade de comandos \textit{Invoke-WebRequest} possíveis no ficheiro "c2\_server\_commands".
 \end{itemize}
 
 \subsection{Arquitetura e Execução}
@@ -36,7 +36,7 @@ Posteriormente, o \textit{bot} retorna ao estado de monitorização, verificando
 
 
 \subsection{Resultados obtidos}
-Após a conclusão da constituição do ambiente, foram realizadas diversas rondas de testes para cada um dos ataques supramencionados, cujos dados podem ser consultados nas nas Tabelas \ref{tab:table-idle}, \ref{tab:table-1-bot} e \ref{tab:table-2-bots}. Neste seguimento, cabe notar que todos os ataques foram realizadas via servidor C2, possuíndo uma duração máxima de 30 segundos. Mais se acrescenta que os computadores empregues estavam equipados com o sistema operativo Windows 11 e somente possuíam a aplicação de linha de comandos em execução durante os testes.
+Após a conclusão da constituição do ambiente, foram realizadas diversas rondas de testes para cada um dos ataques supramencionados, cujos dados podem ser consultados nas Tabelas \ref{tab:table-idle}, \ref{tab:table-1-bot} e \ref{tab:table-2-bots}. Neste seguimento, cabe notar que todos os ataques foram realizadas via servidor C2, possuindo uma duração máxima de 30 segundos. Mais se acrescenta que os computadores empregues estavam equipados com o sistema operativo Windows 11 e somente possuíam a aplicação de linha de comandos em execução durante os testes.
 
 
 \renewcommand{\tablename}{Tabela}
@@ -89,4 +89,4 @@ Após a conclusão da constituição do ambiente, foram realizadas diversas rond
     \end{tabular}
 \end{table}
 
-Mediante análise às informações suprarreferidas, é possível compreender que estas proporcionam uma perspetiva abrangente das condições experimentais do ambiente, assim como dos resultados obtidos. Deste modo, é possível tirar ilações sobre a potencial magnitude de um atacante utilizando uma BOTNET, mais especificamente quanto maior a cifra de dispositivo maior será o impacto do ataque. Mais se acrescenta que, embora não tenham ocorrido repercurssões significativas, o sistema de testes, ao ser submetido a uma BOTNET mais populadada seria capaz de ser derrubado.
+Mediante análise às informações suprarreferidas, é possível compreender que estas proporcionam uma perspetiva abrangente das condições experimentais do ambiente, assim como dos resultados obtidos. Deste modo, é possível tirar ilações sobre a potencial magnitude de um atacante utilizando uma BOTNET, mais especificamente quanto maior a cifra de dispositivo maior será o impacto do ataque. Mais se acrescenta que, embora não tenham ocorrido repercussões significativas, o sistema de testes, ao ser submetido a uma BOTNET maior, seria capaz de ser derrubado.
