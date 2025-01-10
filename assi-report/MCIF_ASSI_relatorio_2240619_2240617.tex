@@ -38,6 +38,9 @@
 % FIXME: apagar no fim
 \usepackage{lipsum, soul, color}
 
+% Figuras
+\usepackage{graphicx}
+
 % Secções (subsections) sem : e com o texto a começar em baixo
 \makeatletter % added <<<<<<<<<<<<<<<<<<<
 \def\subsubsection{\@startsection{subsubsection}{3}{\parindent}{1ex plus 0.1ex minus 0.1ex}%
@@ -68,13 +71,14 @@
 % 1 elemento de cada cena em português
 \renewcommand{\abstractname}{Resumo} % trocar de Abstract para Resumo
 \begin{abstract}
-  \lipsum[1-2]
+  A evolução tecnológica apresenta uma progressiva e crescente interconetividade entre dispositivos eletrónicos que, consequentemente, define os ataques \textit{Distributed Denial-of-Service} (DDoS), que visam comprometer a disponibilidade de diversas categorias de sistemas, como uma das ameaças mais significativas ao panorama global da cibersegurança. Deste modo, a clarificação do âmbito dos ataques DDoS revela-se indubitável na constituição de uma proteção considerável contra estes. Assim, o presente documento atingiu o seu objetivo, mediante o facultamento de informação suficiente e relevante no âmbito dos ataques DDoS, de modo a proporcionar uma perspetiva abrangente e detalhada sobre esta temática. Nesta senda, cabe notar que são abordados diversos conceitos sobre os ataques DDoS, categorias, ferramentas utilizadas na sua execução, assim como impactos e motivações destes. Neste seguimento, foi, também, realizada uma demonstração prática no âmbito do comportamento de uma \textit{robot network}, que permitiu tirar ilações relevantes sobre o funcionamento destas redes, assim como a importância da escalabilidade nestas. Mais se acrescenta que foram analisadas diversas complicações e estratégias associadas ao processo de mitigação de ataques DDoS, assim como efetuada uma reflexão sobre o futuro desta temática.
 \end{abstract}
+
 
 % Note that keywords are not normally used for peerreview papers.
 \renewcommand\IEEEkeywordsname{Palavras-chave}
 \begin{IEEEkeywords}
-  IEEE, IEEEtran, journal, \LaTeX, paper, template.
+  ataques, cibersegurança, \textit{Distributed Denial-of-Service}, interconetividade, mitigação, \textit{robot network}.
 \end{IEEEkeywords}
 
 \input{sections/introduction}
@@ -133,13 +137,22 @@
 % simpler here.)
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
-\begin{IEEEbiography}{Ricardo Pereira}
-  Biography text here.
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{imgs/ricardo.jpeg}}]{Ricardo Pereira}
+  (M, 23) é um estudante de Mestrado em Cibersegurança e Informática Forense no Instituto Politécnico de Leiria. Em 2024, licenciou-se em Engenharia Informática pela mesma instituição, onde desenvolveu diversas competências na área de informática, nomeadamente programação, desenvolvimento web, administração de bases de dados e inteligência artificial.
 \end{IEEEbiography}
 
-\begin{IEEEbiography}{André Filho}
-  Biography text here.
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{imgs/andre.png}}]{André Filho}
+  (M, 21) é um engenheiro de software na Interlog Group, onde concentrou a sua experiência profissional no desenvolvimento web. Licenciou-se em 2024 em Engenharia Informática pelo Instituto Politécnico de Leiria. Atualmente, frequenta o Mestrado em Cibersegurança e Informática Forense na mesma instituição, aprofundando os seus conhecimentos nesta área em crescimento.
 \end{IEEEbiography}
+
+\vfill
+
+Vídeo da demonstração da componente prática: https://www.youtube.com/watch?v=nWVITOYAwYE.
+
+
+Código fonte da demonstração prática, localizado na diretoria assi-demo: https://github.com/ricardomlpereira/assi-project.
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate
