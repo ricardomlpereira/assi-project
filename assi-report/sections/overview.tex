@@ -12,11 +12,11 @@ No caso concreto do modelo centralizado, cabe notar que este é organizado hier�
 
 Releva, ainda, notar que, posteriormente à infeção, o \textit{bot} permite ao atacante, mais especificamente, acesso a operações \textit{admin-level}, nomeadamente a leitura e escrita de dados de sistema, coleta de informação pessoal do proprietário, envio de dados, monitorizamento das atividades do utilizador, procura por vulnerabilidades e a instalação e execução de qualquer aplicação \cite{kaspersky_botnets_2017}.
 
-Assim, a construção de uma BOTNET pode ser organizada em 3 fases distintas, a saber:
+Assim, a construção de uma BOTNET pode ser organizada em 3 fases distintas, a saber \cite{kaspersky_botnets_2017}:
 \begin{itemize}
-    \item Preparação e Exposição: o atacante, incialmente, procura por uma vulnerabilidade num dos tipos de dispositivos supramencionados, visando descobrir uma falha que possibilite uma infeção sem rastro deste mesmo dispositivo \cite{kaspersky_botnets_2017}.
-    \item Infeção: o utilizador, ao executar uma ação, compromete o seu próprio dispositivo com o \textit{malware} do atacante, tornado este num \textit{bot}. Nesta senda, cabe notar que existem diversas formas de concretizar a infeção, nomeadamente via estratégias de \textit{social engineering}, mas também mediante outras técnicas mais agressivas, principalmente o caso dos \textit{drive-by downloads} \cite{kaspersky_botnets_2017}.
-    \item Ativação: o atacante possuí controlo total do \textit{bot}, procedendo à sua adição à rede de BOTNET e, posteriormente, à sua utilização num ataque de negação de serviço, \textit{phishing} ou \textit{brute force} \cite{kaspersky_botnets_2017}.
+    \item Preparação e Exposição: o atacante, incialmente, procura por uma vulnerabilidade num dos tipos de dispositivos supramencionados, visando descobrir uma falha que possibilite uma infeção sem rastro deste mesmo dispositivo.
+    \item Infeção: o utilizador, ao executar uma ação, compromete o seu próprio dispositivo com o \textit{malware} do atacante, tornado este num \textit{bot}. Nesta senda, cabe notar que existem diversas formas de concretizar a infeção, nomeadamente via estratégias de \textit{social engineering}, mas também mediante outras técnicas mais agressivas, principalmente o caso dos \textit{drive-by downloads}.
+    \item Ativação: o atacante possuí controlo total do \textit{bot}, procedendo à sua adição à rede de BOTNET e, posteriormente, à sua utilização num ataque de negação de serviço, \textit{phishing} ou \textit{brute force}.
 \end{itemize}
 
 No âmbito de motivações, releva realçar que estas redes são frequentemente empregues em ações de furtos de fundos monetários e de informação pessoal, assim como outros tipos de esquemas, revelando curialidade à técnica de extorsão e a diversas práticas de roubo, assim como na constituição de esquemas. Além disso, são, também, utilizadas na sabotagem de serviços, já que estas possuem a capacidade de concretizar ataques DDoS poderosos \cite{kaspersky_botnets_2017}.
@@ -41,16 +41,67 @@ No caso concreto dos ataques que procuram explorar aplicações indevidamente ut
 Importa, ainda, notar que no ano de 2020 o serviço \textit{Amazon Web Services} foi alvo de um \textit{Volumetric DDoS Attack} de 2.3 \textit{Terabits} por segundo de largura de banda, representado este um dos mais recentes e impactantes ataques da sua categoria. Neste seguimento, o ataque em questão foi concretizado via exploração do protocolo \textit{Connection-less Lightweight Directory Access Protocol}, de modo a inundar serviço em questão com um volume significativo de tráfego irrelevante. Mais se acrescenta que foram necessários diversos dias para que a equipa encarregue de solucionar este constragimento fosse capaz de mitigar por completo o ataque \cite{connectwise_types_of_ddos_attacks,aws_ddos_2020}.
 
 \subsubsection{\textit{Protocol Attacks}}
-TODO
+Os \textit{Protocol Attacks} procuram explorar protocolos, de modo a sobrecarregar um recurso público específico, nomeadamente servidores mas, também, \textit{firewalls} ou \textit{load balancers} constrastando, assim, como os \textit{Volumetric DDoS Attacks}, dado que não é utilizada uma quantidade substancial de uma matéria, principalmente \textit{requests}, para concretizar o ataque de negação de servíço distribuída, mas sim apenas uma falha. Mais se acrescenta que a magnitude dos \textit{Protocol Attacks} é medida mediante cálculo dos pacotes por segundo que este envia \cite{esecurityplanet_types_of_ddos_attacks}.
 
 
-\subsubsection{\textit{Protocol Attacks}}
-TODO
+Neste seguimento, cabe notar os ataques IP \textit{Null} onde os atacantes procuram definir o \textit{header} de um pacote IPv4 como nulo e sem instruções específicas no âmbito da descarta do pacote, de modo a promover que o servidor destinatário deste consuma recursos substanciais numa tentativa fútil de determinar como proceder com o processo de comunicação, mais especificamente a entrega do pacote \cite{esecurityplanet_types_of_ddos_attacks}.
+
+Importa, também, realçar os ataques de TCP \textit{Flooding} que procuram explorar diretamente as características do protocolo TCP. Assim, estes ataques visam exaustar os recursos do sistema alvo, utilizando a estrutura do próprio protocolo, assim como via utilização de técnicas de \textit{spoofing} e pacotes mal formados. Nesta senda, cabe notar que estas práticas permitem, a um atacante, constituir uma disrupção substancial no âmbito da disponibilidade do seu alvo, sendo, consequentemente, relevante realçar as diversas categorias distintas de ataques de TCP \textit{Flooding} existentes, a saber \cite{esecurityplanet_types_of_ddos_attacks,connectwise_types_of_ddos_attacks}:
+\begin{itemize}
+    \item SYN \textit{Flooding}
+    \item SYN-ACK \textit{Flooding}
+    \item ACK \textit{Flooding}
+    \item ACK \textit{Fragmentation Flooding}
+    \item RST/FIN \textit{Flooding}
+    \item \textit{Multiple} ACK \textit{Spoofed Session Flood}
+    \item \textit{Multiple} SYN-ACK \textit{Spoofed Session Flood}
+    \item \textit{Synonymous} IP \textit{Attack}
+\end{itemize}
+
+
+Além dos ataques que procuram explorar diretamente o protocolo TCP, importa notar outras abordagens que empregam diversos protocolo e técnicas, de modo a concretizar ataques de negação de serviço distribuídos. Neste seguimento, cabe notar que, estes ataques, utilizam, frequentemente, vulnerabilidades inerentes de protocolos habitualmente empregues por inúmeros serviços, aplicações e servidores na Internet. Além disso são, também, executadas estratégias de \textit{flooding}, de modo a aumentar a quantidade de tráfego enviado e, consequentemente, a cifra de recursos consumidos pelo sistema alvo. Mais se acrescenta que estes ataques, apesar de possuírem diversas implementações distintas, partilham o mesmo intuito de comprometer a disponibilidade do seu alvo, assim como possuem a capacidade de serem empregues em conjunto com outros vetores de ataque, promovendo uma dificuldade considerável no âmbito da sua mitigação. Deste modo, cumpre realçar as diversas categorias de ataques abrangidos pelas características supramencionadas, a saber \cite{esecurityplanet_types_of_ddos_attacks,connectwise_types_of_ddos_attacks}:
+\begin{itemize}
+    \item \textit{Session Attacks}
+    \item Slowloris
+    \item \textit{Ping of Death}
+    \item \textit{Smurf Attack}
+    \item \textit{Fraggle Attack}
+    \item \textit{Low Orbit Ion Cannon}
+    \item \textit{High Orbit Ion Cannon}
+\end{itemize}
+
+\subsubsection{\textit{Application Attacks}}
+No âmbito dos DDoS \textit{Application Attacks} importa realçar que estes procuram explorar vulnerabilidades presentes em aplicações, de modo a causar falhas na própria aplicação. Deste modo, cabe notar que, ao contrário de outras categorias de ataques DDoS, mais específicamente aqueles que visam comprometer a disponibilidade de um dispositivo ou infraestrutura, os ataques de aplicações concentram-se na camada de \textit{software}. Contudo, estes ataques podem, também, resultar em processadores sobrecarregados, assim como memórias exaustas, afetando, inclusivamente, o servidor e outras aplicações. Assim, releva realçar que a magnitude de um \textit{Application Attack} é medida em pedidos por segundo. Mais se acrescenta que os principais ataques DDoS de aplicações incluem \textit{Hypertext Transfer Protocol} (HTTP) \textit{Flood Attacks} e ReDoS \cite{esecurityplanet_types_of_ddos_attacks,connectwise_types_of_ddos_attacks}.
+
+Nesta senda, cabe notar que os ataques de HTTP \textit{Flood} procuram explorar os comandos HTTP, de modo a sobrecarregar \textit{websites}, os servidores que hospedam estes, assim como a largura de banda emprega para os alcançar, mediante utilização de uma BOTNET. Assim, os \textit{bots} utilizados nestes ataques permitem o envio de múltiplos pedidos sequencialmente, de modo a que cada \textit{bot} constituinte da rede permita aumentar exponencialmente o tráfego enviado para o \textit{website} alvo. Deste modo, importa realçar os diversos tipos de ataques de HTTP \textit{Flood} existentes, a saber \cite{esecurityplanet_types_of_ddos_attacks}:
+\begin{itemize}
+    \item Ataques de GET: o atacante procura enviar um volume substancial de pedidos concurrentes GET de ficheiros de dimensão considerável, nomeadamente vídeos e ficheiros \textit{Portable Document Format} (PDF).
+    \item Ataques de POST: o atacante visa enviar um volume considerável de pedidos concurrentes POST de ficheiros de dimensão notáveel, nomeadamente vídeos e ficheiros PDF.
+    \item \textit{Long-and-Slow} POST \textit{Attacks}: o atacante procura enviar pedidos HTTP POST que indicam o envio de enormes quantidades de dados de uma só vez, mas, na realidade, este envia quantidades mínimas de dados, de forma espaçada. Mais se acrescenta que estes ataques frequentemente empregam a ferramenta R-U-Dead-Yet que possibilita o envio de dados nos moldes necessários a este tipo de ataque \cite{what_is_rudy}.
+    \item \textit{Single Session or Request Attack}: o atacante visa explorar uma vulnerabilidade presente na versão 1.1 do protocolo HTTP, mais especificamente a possibilidade de enviar múltiplos pedidos distintos no \textit{header} de um único pacote.
+    \item \textit{Fragmented} HTTP \textit{Flood}: o atacante procura que os \textit{zombies} da sua BOTNET estabelecam conexões HTTP válidas com sistema alvo enviando, posteriormente, pacotes fragmentados de baixa dimensão a uma velocidade curial aos mínimos aceites pelo servidor neste horizonte. Assim, é possível evadir diversas defesas contra ataques DDoS, já que, dadas as características do ataque, a atividade aparenta ser legítima. Deste modo o servidor mantém a sessão ativa e, consequentemente, consome recursos com largura de banda reservada. Mais se acrescenta que este tipo de ataque pode ser concretizado via utilização da ferramenta Slowloris.
+    \item \textit{Recursive} GET \textit{Flooding}: o atacante visa sobrecarregar o servidor alvo, mediante o envido de pedidos GET no âmbito da obtenção de longas listas de páginas ou imagens. Assim, este ataque possibilita o consumo de recursos enquanto aparenta ser atividade legítima.
+    \item \textit{Random Recursive} GET \textit{Flooding}: o atacante executa um ataque, essencialmente, análogo ao \textit{Recursive} GET \textit{Flooding}, mas emprega uma abordagem que permite selecionar aleatóriamente as páginas requisitadas nos pedidos enviados.
+\end{itemize}
+
+No caso concreto do ataque ReDoS, cabe notar que este emprega \textit{regular expressions}, de modo a concretizar um ataque de DDoS. Assim, o atacante constitui pedidos que visam obter quantidades extraordináriamente elevadas e complexas de padrões de pesquisa, possibilitando a exaustão de recursos ou, potencialmente, o acontecimento de \textit{crashes} no sistema alvo \cite{esecurityplanet_types_of_ddos_attacks}.
 
 
 \subsection{\textit{Mecanismos de Deteção}}
-TODO
 
+\hl{TODO - Especificar que isto sao detacao atraves de sinais}
+
+No âmbito da deteção de ataques DDoS, importa realçar que este processo envolve, essencialmente, o reconhecimento de sinais que indicam que o sistema encontra-se como alvo de ataque. Assim, revela-se imperativo notar estes mesmos sinais, a saber \cite{cybergc_defending_agaisnt_ddos}:
+\begin{itemize}
+    \item Aumento súbito e inesperado de tráfego de rede de uma localização específica ou de um endereço IP particular
+    \item Desempenho fraco e irregular da rede, nomeadamente no âmbito dos tempos de carregamento dos \textit{websites} e da disponibilidade global dos serviços. Mais se acrescenta que um abrandamento considerável de um sistema é um sinal evidente de que este se encontra sob um ataque DDoS.
+    \item Mensagens de erro de servidores, \textit{timeouts} e incapacidades em aceder a serviços e aplicações inexplicáveis. Assim, aquando destas circunstâncias, um atacante conseguiu comprometer a disponibilidade do sistema. Mais se acrescenta que, no caso concreto de um ataque DDoS de grau superior de seriedade, estas complicações não serão resolvidas mediante, exclusivamente, redução do tráfego de rede que chega a esta.
+    \item Queixas, por parte dos funcionários, sobre uma conetividade de rede fraca. Mais se acrescenta que, este sinal, revela principal utilidade em circunstâncias onde a rede utilizada pelos funcionários é a mesma que a rede empregue pelos serviços, servidores e aplicações da organização.
+    \item Desempenho transversalmente reduzido de dispositivos pertencente à mesma rede. Neste caso concreto, é possível perspetivar que o atacante comprometeu com sucesso a largura de banda da rede, minimizando a disponibilidade desta para os dispositivos que de si dependem.
+    \item Notificações do \textit{Internet Service Provider},\textit{Cloud Service Provider}, assim como outros fornecedores de serviços empregues.
+\end{itemize}
+
+\hl{TODO - Abordar ferramentas em especifico}
 
 \subsection{\textit{Ferramentas e plataformas utilizadas}}
 TODO
