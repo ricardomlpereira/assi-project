@@ -1,5 +1,5 @@
-\section{Estratégias e desafios na mitigação}
-\hl{TODO - Especificar que isto sao detacao atraves de sinais}
+\section{Desafios e estratégias na mitigação}
+A prevenção de ataques DDoS revela ser um processo de dificuldade significativa, dada a existência de múltiplos fatores que condicionam este processo. Neste seguimento, cabe notar a natureza distribuídas destes ataques complica este processo, dado que são, habitualmente, empregues BOTNETs constituidas por uma cifra imensa de dispositivos distintos, que não possibilitam um bloqueamento de tráfego eficiente, já que existe uma imensurável quantidade de fontes deste mesmo. Deste modo, importa, também, realçar o volume de tráfego associado a um ataque DDoS que, em ataques modernos, pode facilmente sobrecarregar a largura de banda de uma rede. Além disso, a variedade de ataques DDoS existente possuí a consequencia de promover uma necessidade de adorar estratégias de defesa em camadas, mediante diversas técnicas, nomeadamente \textit{web application firewalls}, \textit{rate limiting}, DNS-\textit{Based traffic management}. Mais se acrescenta que os ataques DDoS tem apresentado um crescimento notório na sua sofisticação, mediante utilização de técnicas avançadas que permitem evadir processos de deteção e maximizar os impactos, assim como a utilização de múltiplos vetores de ataque consecutivamente e a crescente acessibilidade a serviços de DDoS-as-a-Service que possibilitam, a utilizadores isentos de conhecimentos relevantes à execução de um ataque DDoS, realizar ataques, via realização, únicamente, de um pagamento \cite{perimeter81_ddos_motivations,radware_ddos_prevention,redhelix_rise_ddos_attacks}.
 
 No âmbito da deteção de ataques DDoS, importa realçar que este processo envolve, essencialmente, o reconhecimento de sinais que indicam que o sistema encontra-se como alvo de ataque. Assim, revela-se imperativo notar estes mesmos sinais, a saber \cite{cybergc_defending_agaisnt_ddos}:
 \begin{itemize}
@@ -11,19 +11,24 @@ No âmbito da deteção de ataques DDoS, importa realçar que este processo envo
     \item Notificações do \textit{Internet Service Provider},\textit{Cloud Service Provider}, assim como outros fornecedores de serviços empregues.
 \end{itemize}
 
-\hl{TODO - Abordar ferramentas em especifico}
+Nesta senda, cabe, também, notar que existem métodos automatizados que permitem a deteção de ataques DDoS, nomeadamente ferramentas como \textit{Intrusion Detection Systems} e \textit{Security Information and Event Management}, que proporcionam um alerta célere e eficiente dos administradores, numa circunstância em que algum sistema, abrangido por estes, seja alvo de um ataque \cite{suntera_rise_ddos}.
 
-
-
-Tópicos a abordar:
+No caso concreto de proteção e mitigação, releva realçar que são adotadas diversas técnicas e estratégias, de modo a redirecionar, para um \textit{scrubbing center} ou utilizando \textit{load balancers}, o tráfego resultante de um ataque DDoS, de forma célere e eficiente. Além disso, as organizações, atualmente, adotam, também, diversas tecnologias que permitem identificar e interceptar tráfego malicioso, a saber \cite{ibm_what_is_ddos}:
 \begin{itemize}
-    \item 2 páginas
-    \item Difiuldades de deteção
-    \item Escalabilidade das defesas
-    \item Sofisticação dos ataques
-    \item Assimetria entre recursos de ataque e defesa (...)
-    \item como detetar um ataque DDoS
-    \item Estrategias de ultima geração com grandes impactos
-    \item AI-Driven trafic analysis; cloud-based mitigation; zero-trust network security; ect
-    \item Estrategias mais tradicionais e ferramentas (maybe)
+    \item \textit{Web application firewalls}: quando utilizadas em conjunto com outras defesas periféricas, permitem proteger a rede, assim como as aplicações de atividade maliciosa, mediante análise a cada pacote no tráfego de rede, de modo a identificar e bloquear tráfego malicioso.
+    \item Content Delivery Networks: permitem agilizar o acesso dos utilizadores a recursos \textit{online}, via a utilização de uma rede de servidor distribuídos, sendo que, no caso concreto em que esta é impactada por um ataque DDoS, é possível alterar o trajeto do tráfego legítimo para outros servidores que possuam recursos disponíveis.
+    \item \textit{Security Information and Event Management}: proporcionam diversas funções de deteção de ataques DDoS antecipadamente, mediante a análise de eventos de segurança, assim como a monitorização de tráfego de rede, alertando os administradores, aquando da deteção de atividade maliciosa.
 \end{itemize}
+
+Nesta senda, cabe, também, notar a existência de tecnologias de proteção e mitigação de ataques DDoS de última geração, a saber: \textit{Cloud-based mitigation}; \textit{AI-Driven traffic analysis}.
+
+
+A primeira, proporciona proteções aos sistemas, via utilização de infraestruturas em nuvem, de modo a absorver, filtrar e mitigar tráfego malicioso, previamente à chegada deste ao sistema. Neste seguimento, esta tecnologia possuí no seu cerne 4 etapas distintas, de modo a combater o ataque, a saber \cite{cloudflare_cloud_based_protection}:
+\begin{itemize}
+    \item Deteção: identificação de tráfego malicioso, mediante análise minuciosa do tráfego de rede
+    \item Resposta: sistemas abandonam tráfego de rede enviado por fontes maliciosas e concentram os esforços no restante tráfego
+    \item Encaminhamento: redirecionamento de tráfego eficiente, de modo a minimzar a quantidade deste presente na rede e, consequentemente, aprimorar a capacidade do sistema lidar com este
+    \item Adaptação: análise de padrões na rede, de modo a ajustar as defesas do sistema e, consequentemente, aprimorar a sua capacidade de detetar e mitigar futuros ataques DDoS
+\end{itemize}
+
+Por sua vez, a segunda, possibilita a identificação de tráfego malicioso de forma célere e eficiente, via utilização de algoritmos de \textit{machine learning} que analisam o tráfego de uma rede contínuamente, de modo a identificar anomalias e a bloquear ameaças. Nesta senda, cabe notar que, a utilização destes algoritmos possibilita uma deteção de ameaças dinâmica, já que é possível alterar as regras de deteção em tempo real, permitindo ajustar estas a cada circunstância específica. Assim, esta adaptibilidade faculta proteções consideráveis no âmbito de ataques DDoS que empregam múltiplos vetores de ataque. Mais se acrescenta que o processamento, por parte dos algoritmos, de um volume progressivamente crescente de dados, permite que estes efetuem um aprimoramento significativo das suas capacidades, sendo que estas novas aptidões revelam-se cruciais na manutenção do desempenho e disponibilidade dos sistemas, em circunstâncias onde são requisitadas respostas imediatas e precisas \cite{edgenext_ai_ddos_protection}.
