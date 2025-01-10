@@ -4,7 +4,7 @@ def main():
     try:
         # Create an instance of HTTP_Spam
         http_spam = HTTP_Spam(
-            u="192.168.1.147",  # Target URL (your local server)
+            u="192.168.1.147",  # Target URL (This test was done on a local network)
             p=8080,  # Port of the target server
             cookie="SessionID=12345",  # Custom cookies
             user_agents=["Mozilla/5.0", "CustomUserAgent/1.0"],  # User-Agent headers
@@ -34,7 +34,7 @@ def main():
 
         # Stop the attack manually if needed
         print("[*] Stopping HTTP spamming...")
-        http_spam.stop = True  # Graceful termination of the attack
+        http_spam.stop = True  # Termination of the attack
 
         print("[*] HTTP spamming stopped.")
     except Exception as e:

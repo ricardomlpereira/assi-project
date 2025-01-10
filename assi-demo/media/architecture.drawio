@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:134.0) Gecko/20100101 Firefox/134.0" version="26.0.4">
+  <diagram name="Page-1" id="a3q1jaN0-kIsY0FGu1KW">
+    <mxGraphModel dx="704" dy="631" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-2" value="C2 server" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/generic_server.svg;" parent="1" vertex="1">
+          <mxGeometry x="446" y="220" width="28.000000000000004" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="X0CxsEiM6GIyLMOPJYd9-3" target="X0CxsEiM6GIyLMOPJYd9-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X0CxsEiM6GIyLMOPJYd9-3" target="X0CxsEiM6GIyLMOPJYd9-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="373" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-35" value="&lt;div&gt;Execute&lt;/div&gt;&lt;div&gt;Attack&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X0CxsEiM6GIyLMOPJYd9-23" vertex="1" connectable="0">
+          <mxGeometry x="-0.3384" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-3" value="Infected Bot" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/laptop_client.svg;" parent="1" vertex="1">
+          <mxGeometry x="350" y="380" width="45" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-12" value="Target Server" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/web_server.svg;" parent="1" vertex="1">
+          <mxGeometry x="446" y="550" width="40" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="X0CxsEiM6GIyLMOPJYd9-20" target="X0CxsEiM6GIyLMOPJYd9-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="X0CxsEiM6GIyLMOPJYd9-20" target="X0CxsEiM6GIyLMOPJYd9-12" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="575" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-36" value="&lt;div&gt;Execute&lt;/div&gt;&lt;div&gt;Attack&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X0CxsEiM6GIyLMOPJYd9-24" vertex="1" connectable="0">
+          <mxGeometry x="-0.3049" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-20" value="Infected Bot" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/laptop_client.svg;" parent="1" vertex="1">
+          <mxGeometry x="520" y="380" width="45" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="X0CxsEiM6GIyLMOPJYd9-32" target="X0CxsEiM6GIyLMOPJYd9-2" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-34" value="&lt;div&gt;Queue&amp;nbsp;&lt;/div&gt;&lt;div&gt;Command (HTTP)&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X0CxsEiM6GIyLMOPJYd9-33" vertex="1" connectable="0">
+          <mxGeometry x="-0.128" y="2" relative="1" as="geometry">
+            <mxPoint y="-2" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-32" value="Operator" style="image;aspect=fixed;perimeter=ellipsePerimeter;html=1;align=center;shadow=0;dashed=0;spacingTop=3;image=img/lib/active_directory/user.svg;" parent="1" vertex="1">
+          <mxGeometry x="610" y="170" width="18.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-44" value="" style="shape=flexArrow;endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="460" y="440" as="sourcePoint" />
+            <mxPoint x="460" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="X0CxsEiM6GIyLMOPJYd9-45" value="Send Traffic &lt;br&gt;(HTTP, TCP, UDP)" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="X0CxsEiM6GIyLMOPJYd9-44" vertex="1" connectable="0">
+          <mxGeometry x="0.2229" y="1" relative="1" as="geometry">
+            <mxPoint x="-1" y="-21" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uobsA68Do2qPw8Oexx9j-1" value="" style="endArrow=none;dashed=1;html=1;dashPattern=1 3;strokeWidth=2;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="420" as="sourcePoint" />
+            <mxPoint x="483" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uobsA68Do2qPw8Oexx9j-2" value="&lt;div&gt;Fetch&lt;/div&gt;&lt;div&gt;Command&lt;/div&gt;&lt;div&gt;And&lt;/div&gt;&lt;div&gt;Report Results&lt;/div&gt;&lt;div&gt;(HTTP)&lt;br&gt;&lt;/div&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="460.00380952380965" y="349.9990476190477" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
